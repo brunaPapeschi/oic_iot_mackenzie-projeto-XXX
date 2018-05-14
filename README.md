@@ -18,9 +18,9 @@
 | Documentação da Visão    | Complete    |
 | Requisitos               | In Progress |
 | Casos de Uso             | In Progress |
-| Interface                | Not Started |
-| Protocolos               | Not Started |
-| Modulos de Comunicação   | Not Started |
+| Interface                | Complete    |
+| Protocolos               | Complete    |
+| Modulos de Comunicação   | Complete    |
 
 ###  Desenvolvimento do Código 
 
