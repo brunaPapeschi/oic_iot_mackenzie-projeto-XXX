@@ -38,9 +38,13 @@ O projeto utiliza Protocolo Wireless e utiliza o Bluetooth como forma de conexã
   
 •	Protocolos de Comunicação 
 o	Baseband: camada que determina como os dispositivos localizam e se comunicam com outros aparelhos via Bluetooth.
+
 o	LMP (Link Manager Protocol): essa camada responde por aspectos da comunicação em si, lidando com parâmetros de autenticação, taxas de transferência de dados, criptografia, níveis de potência, entre outros;
+
 o	HCI (Host Controller Interface): camada que disponibiliza uma interface de comunicação com hardware Bluetooth, proporcionando interoperabilidade entre dispositivos distintos;
+
 o	L2CAP (Logical Link Control and Adaptation Protocol): essa camada serve de ligação com camadas superiores e inferiores, lida com parâmetros de QoS (Quality of Service — Qualidade de Serviço), entre outros.
+
 o	Firmata (USB-Serial): será utilizado para programar no Arduino através de um computador host.  
 
 
