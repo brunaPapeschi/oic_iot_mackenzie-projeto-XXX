@@ -31,8 +31,7 @@ O projeto utiliza Protocolo Wireless e utiliza o Bluetooth como forma de conexã
 	  ![](arduino.jpg)
 	  
 2.1.Arduino  Sensor  Shleldv5.0
-
-	  ![](arduinov5.jpg)
+  ![](arduinov5.jpg)
 	  
 2.3. Modulo Bluetooth HC-06
   ![](blue.jpg)
