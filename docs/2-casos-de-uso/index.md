@@ -8,32 +8,80 @@
 
 ## 2. Especificação dos casos de uso
 
-**Instruções do professor**: Para cada caso de uso, criar as tabelas com a especificação do caso de uso. Siga o exemplo dado abaixo:
 
-### 2.1. Caso de uso **REGISTRAR CHAMADO**
+
+Listar Movimentos
+Excluir Movimentos
+Buscar Movimentos salvos
+
+Registrar Movimentos
+### 2.1. Caso de uso **Ligar o braço robótico**
 
 | Campo          | Informação        |
 |---|---|
 | Identificador: | UC01              |
-| Nome:          | Registrar chamado |
-| Atores:        | Membro do Help Desk |
-| Sumário:       | Registra um novo chamado no sistema |
+| Nome:          | Ligar o braço robótico |
+| Atores:        | Operário               |
+| Sumário:       | Liga o braço robótico  |
 
 | Fluxo Principal |
 |---|
-| 1) O membro do help desk seleciona a opção **Registro de novo chamado** e informa o CPF do cliente. |
-| 2) O sistema recupera as informações do cliente pelo CPF.                   |
-| 3) O sistema apresenta as informações do cliente e o formulário para o registro do chamado. |
-| 4) O membro do help desk informa o tipo de chamado e preenche o campo descrição com o relato do cliente. |
-| 5) O sistema registra o chamado e informa que a operação foi bem-sucedida. |
+| 1) O operário liga o braço robótico através de um aparelho mobile.  |
+| 2) O operário seleciona a próxima ação.                |
 
-| Fluxo Alternativo (2a): O sistema não encontra as informações do cliente pelo CPF. |
+| Fluxo Alternativo (2a): O aplicativo não consegue se conectar com o braço robótico. |
 |---|
-| 1) O sistema informa que não conseguiu recuperar as informações pelo CPF e apresenta a opção de cadastrar o cliente. |
-| 2) O membro do help desk preenche o formulário de cadastro do cliente. |
-| 3) O sistema registra os dados do cliente. |
-| 4) Volta ao passo (3) do fluxo principal. |
+| 1) O aplicativo não consegue se conectar com o braço robótico. |
+| 2) O operário reinicia o aplicativo . |
+| 3) Volta ao passo (1) do fluxo principal. |
 
-**Instruções do professor**: As tabelas acima mostram um exemplo de especificação de **um único caso de uso**. Lembre-se de especificar cada um dos casos de uso.
+| Identificador: | UC02              |
+| Nome:          | Gravar movimentos |
+| Atores:        | Operário               |
+| Sumário:       | Grava os movimentos desejados pelo operário  |
+
+| Fluxo Principal |
+|---|
+| 1) O operário seleciona o modo de gravação.  |
+| 2) O operário direciona os movimentos a serem salvos.                   |
 
 
+| Fluxo Alternativo (2a): O aplicativo não consegue gravrar os movimentos  |
+|---|
+| 1) O aplicativo não consegue iniciar a gravação dos movimentos realizados pelo btraço robótico.|
+| 2) O operário reinicia o aplicativo . |
+| 3) Volta ao passo (1) do fluxo principal.|
+
+| Identificador: | UC03          |
+| Nome:          | Salvar os movimentos |
+| Atores:        | Operário               |
+| Sumário:       | Salva os movimentos gravados pelo operário  |
+
+| Fluxo Principal |
+|---|
+| 1) O operário seleciona a opção de salvar  os movimentos  |
+| 2) O operário encerra o mode gravação do braço robótico.                   |
+
+
+| Fluxo Alternativo (2a): O aplicativo não consegue salvar os movimentos  |
+|---|
+| 1) O operário não consegue salvar os movimentos |
+| 2) O aplicativo perde os movimentos gravados pelo operário |
+| 3) Volta ao passo (1) do fluxo principal do caso de uso UC03 . |
+
+| Identificador: | UC04         |
+| Nome:          | Reproduzir Movimentos |
+| Atores:        | Operário               |
+| Sumário:       | Reproduz os movimentos salvos  |
+
+| Fluxo Principal |
+|---|
+| 1) O operário seleciona qual movimento deseja reproduzir   |
+| 2) O operário innicia                    |
+
+
+| Fluxo Alternativo (2a): O aplicativo não consegue salvar os movimentos  |
+|---|
+| 1) O operário não consegue salvar os movimentos |
+| 2) O aplicativo perde os movimentos gravados pelo operário |
+| 3) Volta ao passo (1) do fluxo principal do caso de uso UC03 . |
