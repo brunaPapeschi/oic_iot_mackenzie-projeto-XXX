@@ -35,6 +35,9 @@ Registrar Movimentos
 | 2) O operário reinicia o aplicativo . |
 | 3) Volta ao passo (1) do fluxo principal. |
 
+
+| Campo          | Informação        |
+|---|---|
 | Identificador: | UC02              |
 | Nome:          | Gravar movimentos |
 | Atores:        | Operário               |
@@ -52,6 +55,9 @@ Registrar Movimentos
 | 2) O operário reinicia o aplicativo . |
 | 3) Volta ao passo (1) do fluxo principal.|
 
+
+| Campo          | Informação        |
+|---|---|
 | Identificador: | UC03          |
 | Nome:          | Salvar os movimentos |
 | Atores:        | Operário               |
@@ -69,6 +75,9 @@ Registrar Movimentos
 | 2) O aplicativo perde os movimentos gravados pelo operário |
 | 3) Volta ao passo (1) do fluxo principal do caso de uso UC03 . |
 
+
+| Campo          | Informação        |
+|---|---|
 | Identificador: | UC04         |
 | Nome:          | Reproduzir Movimentos |
 | Atores:        | Operário               |
