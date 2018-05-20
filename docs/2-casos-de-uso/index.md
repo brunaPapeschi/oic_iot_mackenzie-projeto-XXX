@@ -2,19 +2,10 @@
 
 ## 1. Diagrama de casos de uso
 
-**Instruções do professor**: Insira abaixo o diagrama com os casos de uso do seu sistema. A imagem abaixo é somente um exemplo.
-
 ![](casos_arduino.jpg)
 
 ## 2. Especificação dos casos de uso
 
-
-
-Listar Movimentos
-Excluir Movimentos
-Buscar Movimentos salvos
-
-Registrar Movimentos
 ### 2.1. Caso de uso **Ligar o braço robótico**
 
 | Campo          | Informação        |
@@ -86,11 +77,69 @@ Registrar Movimentos
 | Fluxo Principal |
 |---|
 | 1) O operário seleciona qual movimento deseja reproduzir   |
-| 2) O operário innicia                    |
+| 2) O aplicativo se conecta com o braço robótico e reproduz os moviemntos                    |
 
 
-| Fluxo Alternativo (2a): O aplicativo não consegue salvar os movimentos  |
+| Fluxo Alternativo (2a): O aplicativo não consegue reproduzir os movimentos salvos  |
 |---|
-| 1) O operário não consegue salvar os movimentos |
-| 2) O aplicativo perde os movimentos gravados pelo operário |
-| 3) Volta ao passo (1) do fluxo principal do caso de uso UC03 . |
+| 1) O aplicativo não consegue se conectar com o braço robótico. |
+| 2) O operário reinicia o aplicativo . |
+| 3) Volta ao passo (1) do fluxo principal. |
+
+| Campo          | Informação        |
+|---|---|
+| Identificador: | UC05        |
+| Nome:          | Listar Movimentos |
+| Atores:        | Operário               |
+| Sumário:       | Listar Movimentos salvos  |
+
+| Fluxo Principal |
+|---|
+| 1) O operário seleciona listar todos os moviementos gravados no aplicativo   |
+| 2) O aplicativo mostra todos os movimentos salvos                   |
+
+
+| Fluxo Alternativo (2a): O aplicativo não consegue listar os movimentos salvos  |
+|---|
+| 1) O aplicativo não consegue listar os movimentos salvos. |
+| 2) O operário reinicia o aplicativo . |
+| 3) Volta ao passo (1) do fluxo principal. |
+
+| Campo          | Informação        |
+|---|---|
+| Identificador: | UC06       |
+| Nome:          | Buscar Movimentos |
+| Atores:        | Operário               |
+| Sumário:       | Buscar Movimentos salvos  |
+
+| Fluxo Principal |
+|---|
+| 1) Após  o UCO5 estar finalizado, o operário busca o movimento desejado |
+| 2) Operário escolhe o movimento desejado                 |
+
+
+| Fluxo Alternativo (2a): O aplicativo não consegue buscar o movimento salvo  |
+|---|
+| 1) O aplicativo não consegue buscar  o movimento salvo. |
+| 2) O operário reinicia o aplicativo . |
+| 3) Volta ao passo (1) do fluxo principal  |
+
+| Campo          | Informação        |
+|---|---|
+| Identificador: | UC06       |
+| Nome:          | Excluir Movimentos |
+| Atores:        | Operário               |
+| Sumário:       | Excluir Movimentos salvos  |
+
+| Fluxo Principal |
+|---|
+| 1) Após  o UCO5 estar finalizado, o operário busca o movimento desejado |
+| 2) Operário escolhe o movimento a ser excluido              |
+| 3) Movimento excluido com sucesso            |
+
+
+| Fluxo Alternativo (2a): O aplicativo não consegue excluir o movimento salvo  |
+|---|
+| 1) O aplicativo não consegue excluir o movimento salvo. |
+| 2) O operário reinicia o aplicativo . |
+| 3) Volta ao passo (1) do fluxo principal  |
