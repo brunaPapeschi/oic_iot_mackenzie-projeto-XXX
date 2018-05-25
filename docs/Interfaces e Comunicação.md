@@ -1,28 +1,28 @@
-Projeto 
-Braço Robótico aplicado em Fábricas
+# Projeto 
+
+## Braço Robótico aplicado em Fábricas
                          
 
-Interfaces e comunicação
+## Interfaces e comunicação
 
 
-•	Interfaces Gráficas (GUI)
+### Interfaces Gráficas (GUI)
    O aplicativo para movimentar o Braço Robótico será desenvolvido para plataformas mobile.
 
-1.Servos
-![](APP braço robótico - servos.png)
-![](4dof-robot.jpg)
 
-1.2.Navegação
- ![](APP braço robótico - navegação.png)
+• 1.Servos
 
-1.3.Login
-![](APP braço robótico - login.png)
+•1.2.Navegação
+ 
+
+•1.3.Login
 
  
 
-1.4.Controle
- ![](APP braço robótico - controle.png)
 
+•1.4.Controle
+ 
+ 
 
 •	Placas 
 O projeto utiliza Protocolo Wireless e utiliza o Bluetooth como forma de conexão.
