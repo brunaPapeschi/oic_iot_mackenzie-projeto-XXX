@@ -37,9 +37,9 @@
 | Bibliotecas              | In Progress |
 
 ### Issues  
-## Documentação 
-
-|Modulos                   |Arquivo      | Status| 
+ 
+|Modulos                   |Status       |  
 |---|---|
-| Carregamento de imagens  |             | Open
-| Bibliotecas              | In Progress |
+| Carregamento de imagens  |Open         | 
+| Mudança de Escopo- Wireless                      |Open         |
+|Proporção do Protótipo    |Open|
