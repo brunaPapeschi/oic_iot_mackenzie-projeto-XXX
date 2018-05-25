@@ -25,7 +25,7 @@ o	Fios Jumpers para Arduino;
 o	Parafusos.
 o	1 – Braço comercial em acrílico modelo ARM2;
 
-
+![](acrilico.PNG)
  
 
 
@@ -35,8 +35,14 @@ o	1 – Braço comercial em acrílico modelo ARM2;
 o	IOS – Aplicativo Mobile 
 o	C++ - Arduino 
 
- Desenho Tinkercad 
+### Desenho Tinkercad 
  
- Esquema eletrônico
+ ![](tink.png)
+ 
+
+ ### Esquema eletrônico
+ ![](eletric.PNG)
+ 
+
  
 
