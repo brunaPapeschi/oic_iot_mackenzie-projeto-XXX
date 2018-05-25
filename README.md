@@ -26,15 +26,15 @@
 
 |Modulos                   |Status       |
 |---|---|
-| Codigo                   | In Progress |
-| Bibliotecas              | In Progress |
+| Codigo                   | Complete |
+| Bibliotecas              | Complete |
 
 ### Software de Controle  
 
 |Modulos                   |Status       |
 |---|---|
-| Codigo                   | In Progress |
-| Bibliotecas              | In Progress |
+| Codigo                   | Complete    |
+| Bibliotecas              | Complete |
 
 ### Issues  
  
