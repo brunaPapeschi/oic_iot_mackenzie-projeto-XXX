@@ -1,13 +1,13 @@
      
-     Projeto 
-Braço Robótico aplicado em Fábricas 
+#   Projeto 
+## Braço Robótico aplicado em Fábricas 
 
  O projeto consiste na construção de um braço robótico e de um Software de controle que tem como finalidade a rápida manipulação de peças em um processo de fabricação industrial.
 
 
-Descrição de Hardware 
+## Descrição de Hardware 
 
-Lista de Materiais 
+### Lista de Materiais 
 
 o	4 – Servos motores, modelo SG90;
 o	4 – Potenciômetros 100 k;
@@ -30,9 +30,9 @@ o	1 – Braço comercial em acrílico modelo ARM2;
 
 
 
-Plataforma de Desenvolvimento
+## Plataforma de Desenvolvimento
 
-o	Android – Aplicativo Mobile 
+o	IOS – Aplicativo Mobile 
 o	C++ - Arduino 
 
  Desenho Tinkercad 
