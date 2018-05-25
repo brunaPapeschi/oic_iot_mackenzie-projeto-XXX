@@ -39,11 +39,11 @@ O projeto utiliza Protocolo Wireless e utiliza o Bluetooth como forma de conexã
 
 * HCI (Host Controller Interface): camada que disponibiliza uma interface de comunicação com hardware Bluetooth, proporcionando interoperabilidade entre dispositivos distintos;
 
-*L2CAP (Logical Link Control and Adaptation Protocol): essa camada serve de ligação com camadas superiores e inferiores, lida com parâmetros de QoS (Quality of Service — Qualidade de Serviço), entre outros.
+* L2CAP (Logical Link Control and Adaptation Protocol): essa camada serve de ligação com camadas superiores e inferiores, lida com parâmetros de QoS (Quality of Service — Qualidade de Serviço), entre outros.
 
-*Firmata (USB-Serial): será utilizado para programar no Arduino através de um computador host.  
+* Firmata (USB-Serial): será utilizado para programar no Arduino através de um computador host.  
 
 
 ## Protocolos de Aplicação 
 
-*WAP(Wireless Application Protocol): protocolo de aplicação sem fio. 
+* WAP(Wireless Application Protocol): protocolo de aplicação sem fio. 
