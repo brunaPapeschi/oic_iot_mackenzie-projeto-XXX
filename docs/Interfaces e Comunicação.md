@@ -11,11 +11,14 @@
 
 
 ### 1.Servos
-![](APP braço robótico - servos.png)
+![](APP braço robótico - servos.jpg)
 
 ### 1.2.Navegação
- 
+![](APP braço robótico - navegação.jpg)
+
 ### 1.3.Login
+
+![](APP braço robótico - login.jpg)
 
 ### 1.4.Controle
  
