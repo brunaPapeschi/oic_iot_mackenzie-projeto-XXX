@@ -1,7 +1,7 @@
 # Objetos Inteligentes Conectados 1 sem. 2018
 
 ## Turma 6J11
-## Projeto: Braço Robotico 
+## Projeto: Braço Robótico 
 ## Integrantes do grupo:
 
 * Bruna Aparecida De Jesus Papeschi 
