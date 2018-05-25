@@ -3,7 +3,7 @@
 ## Turma 6J11
 ## Projeto: Braço Robótico 
 
-![](projeto.jpg)
+![](projeto.jpeg)
 
 ## Integrantes do grupo:
 
