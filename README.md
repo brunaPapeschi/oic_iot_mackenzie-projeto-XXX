@@ -35,3 +35,11 @@
 |---|---|
 | Codigo                   | In Progress |
 | Bibliotecas              | In Progress |
+
+### Issues  
+## Documentação 
+
+|Modulos                   |Arquivo      | Status| 
+|---|---|
+| Carregamento de imagens  |             | Open
+| Bibliotecas              | In Progress |
