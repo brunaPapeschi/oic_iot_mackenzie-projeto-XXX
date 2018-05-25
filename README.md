@@ -2,6 +2,9 @@
 
 ## Turma 6J11
 ## Projeto: Braço Robótico 
+
+![](projeto.jpg)
+
 ## Integrantes do grupo:
 
 * Bruna Aparecida De Jesus Papeschi 
