@@ -16,8 +16,8 @@
 |---|---|
 | Documentação do Hardware | Complete    |
 | Documentação da Visão    | Complete    |
-| Requisitos               | In Progress |
-| Casos de Uso             | In Progress |
+| Requisitos               | Complete   |
+| Casos de Uso             | Complete    |
 | Interface                | Complete    |
 | Protocolos               | Complete    |
 | Modulos de Comunicação   | Complete    |
@@ -26,12 +26,12 @@
 
 |Modulos                   |Status       |
 |---|---|
-| Codigo                   | Not Started |
-| Bibliotecas              | Not Started |
+| Codigo                   | In Progress |
+| Bibliotecas              | In Progress |
 
 ### Software de Controle  
 
 |Modulos                   |Status       |
 |---|---|
-| Codigo                   | Not Started |
-| Bibliotecas              | Not Started |
+| Codigo                   | In Progress |
+| Bibliotecas              | In Progress |
