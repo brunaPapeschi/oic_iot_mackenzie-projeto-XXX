@@ -1,1 +1,136 @@
 
+#define BLYNK_PRINT SwSerial
+#include <SoftwareSerial.h>
+SoftwareSerial SwSerial(10, 11); // RX, TX
+#include <BlynkSimpleStream.h>
+#include <Servo.h>
+
+
+
+// Autenticacao Blynk
+char auth[] = "6c1b154e68b6436db139638e94911220";
+
+
+const int PinButton1 = !digitalRead(2);  // pin 2   
+const int PinButton2 = 3;  // pin 3
+
+
+int mode = 1;     // case 1 program robot arm. case 2 replay positions 
+int bounce = 0;
+volatile int buttonPress = 0;
+unsigned long lastButtonPressTime = 0;
+volatile unsigned long bounceTime = 0;
+  
+//Criando um objeto da classe Servo
+Servo servoMotorB;      
+Servo servoMotorBD ;      
+Servo servoMotorBE;
+Servo servoMotorG;
+
+//pino digital associado ao controle do servo motor
+int const servoMotorBP    = 11;  
+int const servoMotorBDP   = 9; 
+int const servoMotorBEP   = 10; 
+int const servoMotorGP   = 8; 
+
+
+int PosArm[4] ;       // array de posicoes
+int ArmPos[100][4];   // array que numera quantidade de movimentos
+int PosCount = 0;     // contador de posicoes com botao clicado
+int PosCountMax = 0;  //  numero de posicoes gravadas que serao reproduzidas no replay
+int PosReached = 0;   // verifica a posicao anterior do servo
+
+
+void setup() {  
+  // Debug console
+  SwSerial.begin(9600);
+
+  // Blynk will work through Serial
+  // Do not read or write this serial manually in your sketch
+  Serial.begin(9600);
+  Blynk.begin(Serial, auth);
+
+
+     for(int i = 0; i <100 ; i++ ){
+         for(int p = 0; p <4 ; p++ ){
+             ArmPos[i][p] = -1;
+         }
+     }
+    pinMode(PinButton1 , OUTPUT);
+    digitalWrite(PinButton1 ,LOW);
+    pinMode(PinButton2, INPUT_PULLUP);
+    //  I have made a small change here due to problem using some Arduinos
+    //attachInterrupt( digitalPinToInterrupt(PinButton2),ButtonPress , LOW );
+    // digitalPinToInterrupt(PinButton2) may not be defined!
+    attachInterrupt( 1,ButtonPress , LOW );   // captura o botao
+
+    //
+    servoMotorB.attach(servoMotorBP); // grip    90 to 180 open    limits of servo movement
+    servoMotorBD .attach(servoMotorBDP); // elbow      to 130 up
+    servoMotorBE.attach(servoMotorBEP); // shoulder   10 to 50 down
+    servoMotorG.attach(servoMotorGP);  // turn    0  to 180 right 
+}
+
+void loop() {
+  Blynk.run();
+  switch(mode){
+    case 1 :  //  program robot arm. 1 press to remember position. 2 presses to progress next case 2 replay mode
+              // analogRead(pin) that reads poteniometers on training arm
+        PosArm[0] = map(analogRead(A0),480,1024,180,90); // map (480,1024 value from potentiometer to 180,90 value sent to servo)
+        PosArm[1] = map(analogRead(A1),180,1000,130,10);
+        PosArm[2] = map(analogRead(A2),950,400,80,10);
+        PosArm[3] = map(analogRead(A3),0,1024,180,10);
+        MoveArm();                          // call method  
+        if(buttonPress == 1){               // flag set by interupt when button is pressed          
+             buttonPress = 0;               // reset flag 
+             if( millis() > (lastButtonPressTime + 1000)){    // only one button press in one secound
+                 // record  position of arm PosArm to array[100][] of armpositions        
+                 ArmPos[PosCount][0] = PosArm[0];
+                 ArmPos[PosCount][1] = PosArm[1];
+                 ArmPos[PosCount][2] = PosArm[2];
+                 ArmPos[PosCount][3] = PosArm[3];
+                 if( PosCount < 100) {      // stop recording if over 100 positions recorded (memory limitations)
+                     PosCount++;         
+                 }
+             }else{                         //  more than one button press
+                 mode = 2;                  // go to next phase
+                 PosCountMax  = PosCount;   // set number of arm positions recorded
+                 PosCount = 0;              // reset count ready to read  arm position array from begining 
+             }
+        lastButtonPressTime = millis();              
+        }
+      break;
+    case 2 :        // read arm position array
+        PosReached = 0;
+        for(int i = 0; i <4 ; i++ ){   //adjust servo positions   
+            // we move the servos in small steps and the delay(20)  makes arm motion smooth and slow
+            if( PosArm[i] > ArmPos[PosCount][i]) PosArm[i] = PosArm[i] - 1;  // if actual position is greater than requird position reduce position by 1
+            if( PosArm[i] < ArmPos[PosCount][i]) PosArm[i] = PosArm[i] + 1;  // if actual position is less than required position value increase position valuue by 1
+            if( PosArm[i] == ArmPos[PosCount][i]) PosReached++;              // check if servo  has reached required position/angle
+        }
+        if(PosReached == 4) PosCount++;        // if all 4 servos have reached position  then increase array index (PosCount)to next position in array
+        if(PosCount == PosCountMax) PosCount = 0;   //  if end of array reached reset index to 0 and repeat.
+        MoveArm();   // physically move arm to updated position, this is broken into small steps
+        delay(20);   // pause between moves so over all motion is slowed down
+      break;
+    default :
+      break;
+  }    
+}
+
+void MoveArm() {   // write arm position data to servos
+  for (int i = 0 ; i < 4 ; i++) {
+    if (PosArm[i] < 5) PosArm[i] = 5;  // limit servo movement to prevent hitting end stops
+    if (PosArm[i] > 175) PosArm[i] = 175;  // servo.write limited 5 - 175  
+  }
+  servoMotorB.write(PosArm[1]);
+  servoMotorBD .write(PosArm[0]);
+  servoMotorBE.write(PosArm[3]);
+  servoMotorG.write(PosArm[2]);
+}
+void ButtonPress(){   //  interupt to capture button press
+    if(micros() > (bounceTime + 3000)){ // debounce timer 
+        bounceTime = micros();          // ingnore interupts due to button bounce
+        buttonPress = 1;     // flag for button pressed
+    }
+   }
