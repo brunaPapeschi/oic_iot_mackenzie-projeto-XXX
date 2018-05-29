@@ -47,7 +47,9 @@ Descrição da montagem do arduino
 ### Steps : 
 
 o 1º  Os palitos de sorvete foram perfurados nas pontas, permitindo que os parafusos fossem inseridos e prensados.
+
 o 2º  O arduino foi conectado com a placa do shield para permitir a duplicação das portas analógicas 
+
 o 3º  Os jumpers foram inseridos nas portas analógicas utilizadas, com o objetivo de conectar com a placa do shield. 
 
 
