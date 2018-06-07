@@ -9,10 +9,13 @@
     
     
 
-Documentações que podem compor as entregas:
-* [Documento de Visão do Projeto](1-visao/)
-* [Casos de Uso](2-casos-de-uso/)
-* Mapas de Navegação
-* Arquitetura
-* Detalhamento dos Componentes
+* Links uteis 
+- Compra do prototipo 
 
+* https://eletronicos.mercadolivre.com.br/pecas-componentes/microcontroladores/arduino/bra%C3%A7o-robotico
+
+-Conexao USB IOT
+* https://www.blynk.cc/
+
+-Arduino 
+* https://www.arduino.cc/en/Main/Software?
