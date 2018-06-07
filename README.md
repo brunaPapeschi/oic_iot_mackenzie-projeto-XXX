@@ -1,7 +1,7 @@
 # Objetos Inteligentes Conectados 1 sem. 2018
 
 ## Turma 6J11
-## Projeto: Braço Robótico 
+## Projeto: Megazord 
 
 ![](projeto.jpeg)
 
